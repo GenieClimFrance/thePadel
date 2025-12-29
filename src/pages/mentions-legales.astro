@@ -1,0 +1,284 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+---
+
+<Layout title="Mentions Légales - The Padel">
+  <!-- Header visuel avec image de fond et overlay dégradé -->
+  <header
+    class="relative h-80 sm:h-[420px] md:h-[480px] lg:h-[540px] flex items-center justify-center overflow-hidden"
+  >
+    <img
+      src="/header-reglement.png"
+      alt="Terrain de padel"
+      class="absolute inset-0 w-full h-full object-cover object-center z-0"
+    />
+    <div
+      class="absolute inset-0 z-10"
+      style="background: linear-gradient(to top, rgba(0,0,0,0.55) 70%, rgba(0,0,0,0.15) 100%);"
+    >
+    </div>
+    <div class="relative z-20 w-full text-center pb-6 px-2 sm:px-0">
+      <h1
+        class="text-2xl sm:text-4xl md:text-5xl font-impact font-bold uppercase mt-16 tracking-wide text-white mb-2 drop-shadow-lg"
+      >
+        Mentions Légales
+      </h1>
+      <p
+        class="text-white font-raleway text-xs sm:text-base md:text-lg max-w-2xl mx-auto opacity-90 drop-shadow-sm"
+      >
+        Informations légales relatives au site THE PADEL<br class="hidden sm:inline" /> et à l'exploitation du centre de padel.
+      </p>
+    </div>
+  </header>
+
+  <main
+    class="bg-white min-h-screen py-8 px-2 sm:px-4 max-w-xl md:mx-auto lg:max-w-7xl mx-4"
+  >
+    <section class="mb-10">
+      <h2
+        class="text-lg sm:text-xl font-impact text-blue-700 mb-3 flex items-center gap-2 border-l-4 border-blue-500 pl-4 uppercase tracking-wide"
+      >
+        1. Éditeur du site
+      </h2>
+      <div
+        class="font-raleway text-gray-800 text-base sm:text-lg leading-relaxed space-y-3"
+      >
+        <p>
+          Le site web <strong>www.thepadel.fr</strong> est édité par :
+        </p>
+        <div class="bg-blue-50 border-l-4 border-blue-400 rounded-md p-4 my-3">
+          <p class="font-semibold text-blue-900 mb-2">THE PADEL</p>
+          <ul class="space-y-1 text-blue-800">
+            <li><strong>Forme juridique :</strong> SAS</li>
+            <li><strong>Siège social :</strong> 20 Avenue Jean Mermoz, 33185 LE HAILLAN</li>
+            <li><strong>Capital social :</strong> 1000€</li>
+            <li><strong>SIRET :</strong> 94003876300022</li>
+            <li><strong>RCS :</strong> Bordeaux</li>
+            <li><strong>TVA intracommunautaire :</strong> FR90940038763</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-10">
+      <h2
+        class="text-lg sm:text-xl font-impact text-blue-700 mb-3 flex items-center gap-2 border-l-4 border-blue-500 pl-4 uppercase tracking-wide"
+      >
+        2. Hébergement
+      </h2>
+      <div
+        class="font-raleway text-gray-800 text-base sm:text-lg leading-relaxed space-y-3"
+      >
+        <p>
+          Le site www.thepadel.fr est hébergé par :
+        </p>
+        <div class="bg-gray-50 border-l-4 border-gray-400 rounded-md p-4 my-3">
+          <p class="text-gray-800"><strong>Nom de l'hébergeur :</strong> Vercel</p>
+          <p class="text-gray-800"><strong>Adresse :</strong> 340 S Lemon Ave #4133, Walnut, CA 91789</p>
+          <p class="text-gray-800"><strong>Email :</strong> support@vercel.com</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-10">
+      <h2
+        class="text-lg sm:text-xl font-impact text-blue-700 mb-3 flex items-center gap-2 border-l-4 border-blue-500 pl-4 uppercase tracking-wide"
+      >
+        3. Propriété intellectuelle
+      </h2>
+      <div
+        class="font-raleway text-gray-800 text-base sm:text-lg leading-relaxed space-y-3"
+      >
+        <p>
+          L'ensemble des éléments présents sur le site www.thepadel.fr (structure, textes, logos, images, vidéos, sons, etc.) sont la propriété exclusive de THE PADEL ou font l'objet d'une autorisation d'utilisation.
+        </p>
+        <p>
+          Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation écrite préalable de THE PADEL.
+        </p>
+        <p>
+          Toute exploitation non autorisée du site ou de l'un quelconque des éléments qu'il contient sera considérée comme constitutive d'une contrefaçon et poursuivie conformément aux dispositions des articles L.335-2 et suivants du Code de la Propriété Intellectuelle.
+        </p>
+        <div class="bg-yellow-50 border-l-4 border-yellow-400 rounded-md p-4 my-3">
+          <p class="text-yellow-800">
+            <strong>Marques :</strong> Les marques et logos "THE PADEL" sont des marques déposées. Toute reproduction ou utilisation sans autorisation expresse est interdite.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-10">
+      <h2
+        class="text-lg sm:text-xl font-impact text-blue-700 mb-3 flex items-center gap-2 border-l-4 border-blue-500 pl-4 uppercase tracking-wide"
+      >
+        4. Protection des données personnelles
+      </h2>
+      <div
+        class="font-raleway text-gray-800 text-base sm:text-lg leading-relaxed space-y-3"
+      >
+        <p>
+          Conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi Informatique et Libertés, THE PADEL met en œuvre des traitements de données à caractère personnel.
+        </p>
+        <p>
+          Pour en savoir plus sur la collecte, l'utilisation et la protection de vos données personnelles, nous vous invitons à consulter notre <a href="/politique-de-confidentialite" class="text-blue-600 underline font-semibold">Politique de Confidentialité</a>.
+        </p>
+        <div class="bg-green-50 border-l-4 border-green-400 rounded-md p-4 my-3">
+          <p class="text-green-800">
+            <strong>Vos droits :</strong> Vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation, d'opposition et de portabilité de vos données personnelles. Pour exercer ces droits, contactez-nous par téléphone au 06 67 45 40 70 ou via notre <a href="/contact" class="text-blue-600 underline">formulaire de contact</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-10">
+      <h2
+        class="text-lg sm:text-xl font-impact text-blue-700 mb-3 flex items-center gap-2 border-l-4 border-blue-500 pl-4 uppercase tracking-wide"
+      >
+        5. Cookies
+      </h2>
+      <div
+        class="font-raleway text-gray-800 text-base sm:text-lg leading-relaxed space-y-3"
+      >
+        <p>
+          Le site www.thepadel.fr utilise des cookies pour améliorer l'expérience utilisateur et réaliser des statistiques de visite.
+        </p>
+        <p>
+          Un cookie est un fichier texte déposé sur votre terminal lors de la visite d'un site web. Il permet de mémoriser des informations relatives à votre navigation.
+        </p>
+        <p>
+          Vous pouvez vous opposer à l'enregistrement de cookies en configurant votre navigateur. Toutefois, la désactivation des cookies peut limiter certaines fonctionnalités du site.
+        </p>
+        <p>
+          Pour plus d'informations, consultez notre <a href="/politique-de-confidentialite" class="text-blue-600 underline">Politique de Confidentialité</a>.
+        </p>
+      </div>
+    </section>
+
+    <section class="mb-10">
+      <h2
+        class="text-lg sm:text-xl font-impact text-blue-700 mb-3 flex items-center gap-2 border-l-4 border-blue-500 pl-4 uppercase tracking-wide"
+      >
+        6. Responsabilité
+      </h2>
+      <div
+        class="font-raleway text-gray-800 text-base sm:text-lg leading-relaxed space-y-3"
+      >
+        <p>
+          THE PADEL s'efforce d'assurer l'exactitude et la mise à jour des informations diffusées sur ce site, dont elle se réserve le droit de corriger, à tout moment et sans préavis, le contenu.
+        </p>
+        <p>
+          Toutefois, THE PADEL ne peut garantir l'exactitude, la précision ou l'exhaustivité des informations mises à disposition sur ce site.
+        </p>
+        <p>
+          En conséquence, THE PADEL décline toute responsabilité :
+        </p>
+        <ul
+          class="list-none pl-0 space-y-2"
+        >
+          <li class="flex items-baseline gap-2">
+            <span
+              class="inline-flex w-1.5 h-1.5 rounded-full bg-blue-700 ring-1 ring-white mt-0.5 flex-shrink-0"
+            ></span>Pour toute imprécision, inexactitude ou omission portant sur des informations disponibles sur le site
+          </li>
+          <li class="flex items-baseline gap-2">
+            <span
+              class="inline-flex w-1.5 h-1.5 rounded-full bg-blue-700 ring-1 ring-white mt-0.5 flex-shrink-0"
+            ></span>Pour tous dommages résultant d'une intrusion frauduleuse d'un tiers ayant entraîné une modification des informations mises à disposition sur le site
+          </li>
+          <li class="flex items-baseline gap-2">
+            <span
+              class="inline-flex w-1.5 h-1.5 rounded-full bg-blue-700 ring-1 ring-white mt-0.5 flex-shrink-0"
+            ></span>Pour tous dommages directs ou indirects causés à l'utilisateur, quelle qu'en soit la nature, résultant du contenu, de l'accès ou de l'utilisation du site
+          </li>
+          <li class="flex items-baseline gap-2">
+            <span
+              class="inline-flex w-1.5 h-1.5 rounded-full bg-blue-700 ring-1 ring-white mt-0.5 flex-shrink-0"
+            ></span>Pour l'utilisation du site par l'utilisateur et les conséquences pouvant en découler
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="mb-10">
+      <h2
+        class="text-lg sm:text-xl font-impact text-blue-700 mb-3 flex items-center gap-2 border-l-4 border-blue-500 pl-4 uppercase tracking-wide"
+      >
+        7. Liens hypertextes
+      </h2>
+      <div
+        class="font-raleway text-gray-800 text-base sm:text-lg leading-relaxed space-y-3"
+      >
+        <p>
+          Le site www.thepadel.fr peut contenir des liens hypertextes vers d'autres sites. THE PADEL n'exerce aucun contrôle sur ces sites et décline toute responsabilité quant à leur contenu.
+        </p>
+        <p>
+          La création de liens hypertextes vers le site www.thepadel.fr est soumise à l'autorisation préalable écrite de THE PADEL.
+        </p>
+      </div>
+    </section>
+
+    <section class="mb-10">
+      <h2
+        class="text-lg sm:text-xl font-impact text-blue-700 mb-3 flex items-center gap-2 border-l-4 border-blue-500 pl-4 uppercase tracking-wide"
+      >
+        8. Droit applicable et juridiction compétente
+      </h2>
+      <div
+        class="font-raleway text-gray-800 text-base sm:text-lg leading-relaxed space-y-3"
+      >
+        <p>
+          Les présentes mentions légales sont régies par le droit français.
+        </p>
+        <p>
+          En cas de litige et à défaut d'accord amiable, le litige sera porté devant les tribunaux français conformément aux règles de compétence en vigueur.
+        </p>
+      </div>
+    </section>
+
+    <section class="mb-10">
+      <h2
+        class="text-lg sm:text-xl font-impact text-blue-700 mb-3 flex items-center gap-2 border-l-4 border-blue-500 pl-4 uppercase tracking-wide"
+      >
+        9. Crédits
+      </h2>
+      <div
+        class="font-raleway text-gray-800 text-base sm:text-lg leading-relaxed space-y-3"
+      >
+        <p>
+          <strong>Conception et développement du site :</strong> Axel Janiak - Akalab | <a href="https://www.axeljaniak.fr" class="text-blue-600 underline">www.axeljaniak.fr</a>
+        </p>
+        <p>
+          <strong>Crédits photos :</strong> THE PADEL / Unsplash | <a href="https://unsplash.com" class="text-blue-600 underline">www.unsplash.com</a> / Adobe Stock | <a href="https://stock.adobe.com" class="text-blue-600 underline">www.stock.adobe.com</a>
+        </p>
+        <p>
+          <strong>Hébergement :</strong> Vercel | <a href="https://vercel.com" class="text-blue-600 underline">www.vercel.com</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="mb-10">
+      <h2
+        class="text-lg sm:text-xl font-impact text-blue-700 mb-3 flex items-center gap-2 border-l-4 border-blue-500 pl-4 uppercase tracking-wide"
+      >
+        10. Contact
+      </h2>
+      <div
+        class="font-raleway text-gray-800 text-base sm:text-lg leading-relaxed space-y-3"
+      >
+        <p>
+          Pour toute question concernant les mentions légales ou le site www.thepadel.fr, vous pouvez nous contacter :
+        </p>
+        <div class="bg-blue-50 border-l-4 border-blue-400 rounded-md p-4 my-3">
+          <p class="text-blue-900"><strong>Par téléphone :</strong> 06 67 45 40 70</p>
+          <p class="text-blue-900"><strong>Par courrier :</strong> THE PADEL, 20 Avenue Jean Mermoz, 33185 LE HAILLAN</p>
+          <p class="text-blue-900"><strong>Via notre formulaire de contact :</strong> <a href="/contact" class="text-blue-600 underline">www.thepadel.fr/contact</a></p>
+        </div>
+      </div>
+    </section>
+
+    <div class="text-center text-xs text-gray-400 mt-12 font-raleway">
+      Dernière mise à jour : Décembre 2025
+    </div>
+  </main>
+</Layout>
+

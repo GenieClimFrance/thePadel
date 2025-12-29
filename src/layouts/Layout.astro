@@ -1,6 +1,7 @@
 ---
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
+// import CookieConsent from "../components/CookieConsent.astro"; // Désactivé : pas de cookies nécessitant un consentement actuellement
 export interface Props {
   title?: string;
 }
@@ -37,6 +38,7 @@ const { title = "The Padel - Votre centre de padel" } = Astro.props;
     <Navbar />
     <slot />
     <Footer />
+    <!-- <CookieConsent /> --> <!-- Désactivé : pas de cookies nécessitant un consentement actuellement -->
   </body>
 </html>
 

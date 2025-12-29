@@ -28,7 +28,7 @@ import FooterCarousel from "./FooterCarousel.astro";
           </p>
         </div>
         <a
-          href="#"
+          href="https://thepadel.mymobileapp.fr/installation?q=29122025110843"
           aria-label="Télécharger l'application"
           class="inline-block bg-[#12EF97] hover:bg-[#10d085] text-[#222] font-impact text-lg uppercase rounded-md px-8 py-4 font-bold mb-0 transition-colors duration-200 shadow-md cta-padel-btn"
           style="letter-spacing:0.5px; position:relative; overflow:hidden;"
@@ -160,10 +160,21 @@ import FooterCarousel from "./FooterCarousel.astro";
   </section>
 </div>
 <!-- Copyright -->
-<div
-  class="w-full text-blue-100 font-raleway text-xs text-center opacity-80 py-2 bg-[#2B2E36]"
->
-  © <span id="footer-year"></span> The Padel. Tous droits réservés.
+<div class="w-full bg-[#2B2E36]">
+  <!-- Liens légaux -->
+  <div class="w-full text-blue-100 font-raleway text-xs text-center opacity-80 pt-3 pb-1">
+    <a href="/politique-de-confidentialite" class="hover:text-[#12EF97] transition underline mx-2">
+      Politique de confidentialité
+    </a>
+    <span class="mx-1">•</span>
+    <a href="/mentions-legales" class="hover:text-[#12EF97] transition underline mx-2">
+      Mentions légales
+    </a>
+  </div>
+  <!-- Copyright -->
+  <div class="w-full text-blue-100 font-raleway text-xs text-center opacity-80 pb-3">
+    © <span id="footer-year"></span> The Padel. Tous droits réservés.
+  </div>
 </div>
 
 <script>

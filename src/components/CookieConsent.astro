@@ -1,0 +1,271 @@
+---
+// Composant de gestion du consentement RGPD avec Tarteaucitron.js
+---
+
+<!-- Tarteaucitron CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tarteaucitronjs@1.17.0/css/tarteaucitron.min.css" />
+
+<!-- Tarteaucitron JS -->
+<script is:inline src="https://cdn.jsdelivr.net/npm/tarteaucitronjs@1.17.0/tarteaucitron.min.js"></script>
+
+<script is:inline>
+  // Configuration de Tarteaucitron
+  tarteaucitron.init({
+    // Informations de confidentialité
+    "privacyUrl": "/politique-de-confidentialite", // URL de la politique de confidentialité
+    
+    // Hashtag pour ouvrir le panneau
+    "hashtag": "#tarteaucitron",
+    
+    // Cookie name
+    "cookieName": "tarteaucitron",
+    
+    // Banner position ("top" ou "bottom")
+    "orientation": "bottom",
+    
+    // Afficher un avertissement sur l'accueil
+    "groupServices": false,
+    
+    // Afficher les alertes lorsqu'un service est autorisé/refusé
+    "showAlertSmall": true,
+    "cookieslist": true,
+    
+    // Fermeture automatique de l'alerte
+    "closePopup": false,
+    
+    // Afficher le bouton "Tout refuser"
+    "showIcon": true,
+    
+    // Position de l'icône (BottomRight, BottomLeft, TopRight, TopLeft)
+    "iconPosition": "BottomLeft",
+    
+    // Afficher un avertissement sur l'icône
+    "iconSrc": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2312EF97'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z'/%3E%3C/svg%3E",
+    
+    // Afficher plus d'infos
+    "adblocker": false,
+    
+    // Afficher le bandeau pour les visiteurs venant d'un autre pays
+    "DenyAllCta": true,
+    
+    // Accepter tous les cookies par défaut
+    "AcceptAllCta": true,
+    
+    // URL de la page de cookies
+    "highPrivacy": true,
+    
+    // Gestion des cookies de navigation
+    "handleBrowserDNTRequest": false,
+    
+    // Suppression des cookies lors du refus
+    "removeCredit": false,
+    
+    // Afficher plus d'infos sur les services
+    "moreInfoLink": true,
+    
+    // Utiliser un cookie pour mémoriser le consentement
+    "useExternalCss": false,
+    
+    // Utiliser un JS externe
+    "useExternalJs": false,
+    
+    // Lire plus de lien
+    "readmoreLink": "/politique-de-confidentialite",
+    
+    // Afficher un bandeau obligatoire
+    "mandatory": false,
+    
+    // Nombre de jours avant l'expiration du consentement
+    "cookieDomain": "",
+    
+    // Gestion des services
+    "bodyPosition": "bottom",
+    
+    // Accepter tous les services d'un groupe en un clic
+    "groupServices": true
+  });
+
+  // Configuration des services
+  
+  // Vercel Analytics - Analytics respectueux de la vie privée
+  // Note : Vercel Analytics ne nécessite pas de consentement selon la CNIL
+  // car il n'utilise pas de cookies et anonymise les données
+  // Mais on peut quand même l'inclure pour transparence
+  
+  // Google Analytics (si vous l'utilisez plus tard)
+  // tarteaucitron.user.gtagUa = 'G-XXXXXXXXXX';
+  // tarteaucitron.user.gtagCrossdomain = ['example.com', 'example2.com'];
+  // tarteaucitron.user.gtagMore = function () { /* add here your optionnal gtag() */ };
+  // (tarteaucitron.job = tarteaucitron.job || []).push('gtag');
+
+  // YouTube (si vous avez des vidéos embarquées)
+  // (tarteaucitron.job = tarteaucitron.job || []).push('youtube');
+
+  // Google Maps (si vous avez une carte embarquée)
+  // (tarteaucitron.job = tarteaucitron.job || []).push('googlemaps');
+
+  // Facebook Pixel (si vous l'utilisez)
+  // tarteaucitron.user.facebookpixelId = 'XXXXXXXXXX';
+  // (tarteaucitron.job = tarteaucitron.job || []).push('facebookpixel');
+
+  console.log('🍪 Tarteaucitron.js initialisé - THE PADEL');
+</script>
+
+<!-- Personnalisation du style pour THE PADEL -->
+<style is:global>
+  /* Personnalisation des couleurs du bandeau */
+  #tarteaucitronRoot #tarteaucitronAlertBig,
+  #tarteaucitronRoot #tarteaucitronAlertSmall {
+    background: #2B2E36 !important;
+    border: 2px solid #12EF97 !important;
+  }
+
+  /* Boutons principaux */
+  #tarteaucitronRoot .tarteaucitronAllow,
+  #tarteaucitronRoot button.tarteaucitronAllow {
+    background: #12EF97 !important;
+    color: #222 !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    font-family: 'Impact', sans-serif !important;
+    letter-spacing: 0.5px !important;
+    border: none !important;
+    transition: all 0.3s ease !important;
+  }
+
+  #tarteaucitronRoot .tarteaucitronAllow:hover,
+  #tarteaucitronRoot button.tarteaucitronAllow:hover {
+    background: #10d085 !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(18, 239, 151, 0.3) !important;
+  }
+
+  /* Bouton tout refuser */
+  #tarteaucitronRoot .tarteaucitronDeny,
+  #tarteaucitronRoot button.tarteaucitronDeny {
+    background: transparent !important;
+    color: #fff !important;
+    border: 2px solid #008AEF !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    font-family: 'Impact', sans-serif !important;
+    letter-spacing: 0.5px !important;
+    transition: all 0.3s ease !important;
+  }
+
+  #tarteaucitronRoot .tarteaucitronDeny:hover,
+  #tarteaucitronRoot button.tarteaucitronDeny:hover {
+    background: #008AEF !important;
+    color: #fff !important;
+    transform: translateY(-1px);
+  }
+
+  /* Bouton personnaliser */
+  #tarteaucitronRoot #tarteaucitronCloseAlert,
+  #tarteaucitronRoot button.tarteaucitronCTAButton {
+    background: transparent !important;
+    color: #12EFED !important;
+    border: 1px solid #12EFED !important;
+    font-family: 'Raleway', sans-serif !important;
+    transition: all 0.3s ease !important;
+  }
+
+  #tarteaucitronRoot #tarteaucitronCloseAlert:hover {
+    background: rgba(18, 239, 237, 0.1) !important;
+  }
+
+  /* Texte du bandeau */
+  #tarteaucitronRoot #tarteaucitronDisclaimerAlert,
+  #tarteaucitronRoot #tarteaucitronAlertBig #tarteaucitronDisclaimerAlert {
+    color: #fff !important;
+    font-family: 'Raleway', sans-serif !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Lien "En savoir plus" */
+  #tarteaucitronRoot a {
+    color: #12EF97 !important;
+    text-decoration: underline !important;
+    font-weight: 600 !important;
+  }
+
+  #tarteaucitronRoot a:hover {
+    color: #10d085 !important;
+  }
+
+  /* Icône flottante */
+  #tarteaucitronRoot #tarteaucitronIcon {
+    background: #2B2E36 !important;
+    border: 2px solid #12EF97 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+    transition: all 0.3s ease !important;
+  }
+
+  #tarteaucitronRoot #tarteaucitronIcon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(18, 239, 151, 0.4) !important;
+  }
+
+  /* Panneau de services */
+  #tarteaucitronRoot #tarteaucitron {
+    background: #2B2E36 !important;
+    color: #fff !important;
+  }
+
+  #tarteaucitronRoot .tarteaucitronLine {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  }
+
+  #tarteaucitronRoot .tarteaucitronTitle {
+    color: #12EF97 !important;
+    font-family: 'Impact', sans-serif !important;
+    text-transform: uppercase !important;
+  }
+
+  #tarteaucitronRoot .tarteaucitronName {
+    color: #fff !important;
+    font-family: 'Raleway', sans-serif !important;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    #tarteaucitronRoot #tarteaucitronAlertBig {
+      width: 100% !important;
+      left: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important;
+      border-radius: 0 !important;
+      border-left: none !important;
+      border-right: none !important;
+      border-bottom: none !important;
+    }
+
+    #tarteaucitronRoot button {
+      font-size: 12px !important;
+      padding: 8px 12px !important;
+    }
+  }
+
+  /* Animation d'entrée */
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  #tarteaucitronRoot #tarteaucitronAlertBig {
+    animation: slideUp 0.4s ease-out !important;
+  }
+
+  /* Z-index élevé pour être au-dessus de tout */
+  #tarteaucitronRoot {
+    z-index: 999999 !important;
+  }
+</style>
+

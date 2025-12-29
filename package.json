@@ -10,9 +10,11 @@
   },
   "dependencies": {
     "@astrojs/node": "^9.2.2",
-    "@astrojs/vercel": "^9.0.2",
+    "@astrojs/vercel": "^8.0.4",
     "@tailwindcss/vite": "^4.1.11",
+    "@vercel/analytics": "^1.6.1",
     "astro": "^5.10.1",
-    "tailwindcss": "^4.1.11"
+    "tailwindcss": "^4.1.11",
+    "tarteaucitronjs": "^1.28.0"
   }
 }

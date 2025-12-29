@@ -3,9 +3,11 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/home/Header.astro";
 import ContentSections from "../components/home/ContentSections.astro";
 import "../styles/global.css";
+import Analytics from '@vercel/analytics/astro'
 ---
 
 <Layout title="Accueil - The Padel">
+  <Analytics />
   <Header />
   <ContentSections />
 </Layout>
