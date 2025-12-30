@@ -1,18 +1,18 @@
 # 🍪 Cookies et RGPD - THE PADEL
 
-## ✅ Statut Actuel : BANDEAU ACTIVÉ
+## ✅ Statut Actuel : PAS DE BANDEAU NÉCESSAIRE
 
-Votre site THE PADEL utilise **Google Maps** sur la page contact, qui nécessite un consentement RGPD.
+Votre site THE PADEL **n'utilise aucun cookie nécessitant un consentement**.
 
-### Services configurés :
+### Services utilisés :
 
-- ✅ **Google Maps** : Carte interactive sur la page contact (nécessite consentement)
-- ✅ **Vercel Analytics** : Analytics respectueux de la vie privée (pas de consentement nécessaire)
-- ✅ **Tarteaucitron.js** : Bandeau de gestion des cookies (activé et stylisé)
+- ✅ **Vercel Analytics** : Analytics respectueux de la vie privée (pas de cookies, pas de consentement nécessaire)
+- ✅ **Google Maps (iframe)** : Carte de localisation simple sur la page contact (pas de consentement nécessaire)
+- ✅ **Tarteaucitron.js** : Installé mais désactivé (prêt si besoin)
 
 ### Vous êtes conforme RGPD ! 🎉
 
-Le bandeau de cookies est actif et permet à vos visiteurs d'accepter ou refuser Google Maps. La carte sera floutée jusqu'à ce que l'utilisateur donne son consentement.
+Sans cookies nécessitant un consentement, vous n'avez **pas besoin** de bandeau. C'est même mieux pour vos utilisateurs (pas de popup ennuyeuse) !
 
 ---
 
@@ -20,15 +20,13 @@ Le bandeau de cookies est actif et permet à vos visiteurs d'accepter ou refuser
 
 ### Actuellement
 
-Le composant `CookieConsent.astro` est **activé** dans `src/layouts/Layout.astro` avec Google Maps configuré :
+Le composant `CookieConsent.astro` est **désactivé** dans `src/layouts/Layout.astro` :
 
 ```astro
-import CookieConsent from "../components/CookieConsent.astro"; // ✅ Activé
+// import CookieConsent from "../components/CookieConsent.astro"; // ✅ Désactivé
 ```
 
-**Services actifs :**
-
-- Google Maps (page contact)
+**Aucun service nécessitant un consentement.**
 
 ### Si vous ajoutez des services plus tard
 
@@ -37,10 +35,10 @@ import CookieConsent from "../components/CookieConsent.astro"; // ✅ Activé
 - Google Analytics
 - Facebook Pixel
 - Vidéos YouTube embarquées
-- Google Maps embarquées
+- Google Maps avec API JavaScript
 - Publicités
 
-**Pour réactiver le bandeau :**
+**Pour activer le bandeau plus tard :**
 
 1. Décommentez l'import dans `src/layouts/Layout.astro`
 2. Configurez les services dans `src/components/CookieConsent.astro`
@@ -58,9 +56,9 @@ import CookieConsent from "../components/CookieConsent.astro"; // ✅ Activé
 
 ## ❓ Questions Fréquentes
 
-### Est-ce que je suis conforme RGPD avec le bandeau ?
+### Est-ce que je suis conforme RGPD sans bandeau ?
 
-**Oui !** Le bandeau Tarteaucitron est conforme RGPD et gère automatiquement le consentement pour Google Maps. Les utilisateurs peuvent accepter ou refuser, et leur choix est mémorisé.
+**Oui !** Si vous n'utilisez pas de cookies nécessitant un consentement, vous n'avez pas besoin de bandeau. Vous devez quand même avoir une politique de confidentialité et respecter les autres obligations RGPD.
 
 ### Qu'est-ce que Vercel Analytics ?
 
@@ -71,9 +69,9 @@ Vercel Analytics est un outil d'analyse web respectueux de la vie privée :
 - ✅ Conforme RGPD par défaut
 - ✅ Pas besoin de consentement
 
-### Comment fonctionne le bandeau pour Google Maps ?
+### Pourquoi l'iframe Google Maps ne nécessite pas de consentement ?
 
-Lorsqu'un utilisateur visite la page contact, la carte Google Maps est **floutée** avec un bouton "Accepter Google Maps". Une fois qu'il clique, la carte s'affiche normalement et son choix est mémorisé pour 13 mois.
+L'iframe d'embed Google Maps est considérée comme un contenu légitime de localisation. Elle n'utilise pas l'API JavaScript de Google Maps et ne dépose pas de cookies de tracking. C'est donc acceptable sans consentement pour une simple carte de localisation.
 
 ### Les cookies de session sont-ils concernés ?
 

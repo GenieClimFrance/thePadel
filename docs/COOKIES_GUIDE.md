@@ -1,31 +1,23 @@
 # 🍪 Guide de Gestion des Cookies - THE PADEL
 
-## 🎯 Statut Actuel : BANDEAU ACTIVÉ ✅
+## 🎯 Statut Actuel : BANDEAU DÉSACTIVÉ
 
-**Le bandeau de cookies est maintenant activé** car votre site utilise **Google Maps** sur la page contact.
+**Le bandeau de cookies est actuellement désactivé** car votre site n'utilise **aucun cookie nécessitant un consentement**.
 
-### Services configurés :
+### Pourquoi pas de bandeau ?
 
-- ✅ **Google Maps** : Carte interactive (page contact) - Nécessite consentement
-- ✅ **Vercel Analytics** : Analytics respectueux de la vie privée (pas de consentement nécessaire)
-- ✅ **Tarteaucitron.js** : Bandeau de gestion stylisé aux couleurs THE PADEL
+- ✅ **Vercel Analytics** ne nécessite pas de consentement (pas de cookies, anonymisé)
+- ✅ **Google Maps (iframe)** : Simple carte de localisation sans API JavaScript
+- ✅ Pas de trackers tiers (Google Analytics, Facebook Pixel, etc.)
+- ✅ Meilleure expérience utilisateur sans popup inutile
 
-### Comment ça fonctionne ?
-
-Lorsqu'un visiteur accède à votre site pour la première fois, un bandeau apparaît en bas de l'écran. Il peut :
-- **Tout accepter** : accepte tous les services (Google Maps)
-- **Tout refuser** : refuse tous les cookies non essentiels
-- **Personnaliser** : choisir service par service
-
-Sur la page contact, la carte Google Maps sera **floutée** avec un bouton "Cliquez pour accepter" jusqu'à ce que l'utilisateur donne son consentement.
-
-**Vous êtes conforme RGPD !** 🎉
+**Vous êtes conforme RGPD sans bandeau !** 🎉
 
 ---
 
-## 📦 Installation Complète
+## 📦 Installation (Déjà Prête)
 
-Tarteaucitron.js est installé, configuré et activé avec Google Maps.
+Tarteaucitron.js est installé et prêt à être activé si vous ajoutez des services nécessitant un consentement.
 
 ## 🎨 Personnalisation
 
